@@ -1,368 +1,138 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "Market Fresh Bold";
-  src: url("./MarketFreshBold.ttf");
-}
 body {
   font-family: "Market Fresh Bold", Arial, sans-serif;
   background-color: black;
   color: whitesmoke;
   text-align: center;
-  background-image: url("./img/Mist-june-4_bw.jpg");
-  background-size: cover;
-  height: 100%;
+  height: 3000px;
   background-attachment: fixed;
   margin: 0px;
   overflow-x: hidden;
 }
-body section {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
 
-#head {
-  position: relative;
+#loading-screen {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  position: absolute;
+  z-index: 100;
+  opacity: 1;
 }
 
 #overlay {
-  position: absolute;
-  z-index: 100;
-  background-color: #00000000;
-  width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: xx-large;
-  flex-direction: column;
-}
-
-#underoverlay {
-  position: absolute;
-  z-index: 90;
-  background-color: black;
   width: 100%;
-  height: 100%;
-}
-
-#overlay2 {
+  background-color: #000000;
   position: absolute;
-  z-index: 50;
-  width: 100%;
-  height: 100%;
   background-image: url("./img/Mist-june-4.jpg");
   background-size: cover;
-  background-attachment: fixed;
 }
 
-#overlay3 {
-  position: absolute;
-  z-index: 80;
-  width: 100%;
-  height: 100%;
-  background-image: url("./img/aurorakardrag.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-#overlay4 {
-  position: absolute;
-  z-index: 70;
-  width: 100%;
-  height: 100%;
-  background-image: url("./img/kiltraske-3.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-#overlay5 {
-  position: absolute;
-  z-index: 60;
-  width: 100%;
-  height: 100%;
-  background-image: url("./img/norrasando.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-#overlay-inner {
+#logo {
   position: relative;
 }
 
-#loading-logo {
+#slogan-container {
+  position: relative;
   opacity: 0;
 }
+#slogan-container .letter {
+  font-size: 1em;
+  opacity: 0;
+  letter-spacing: 0.2em;
+}
 
-.flex-center {
+section {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
-.golden-border {
-  border-bottom: 1px solid DarkGoldenRod;
-  border-top: 1px solid DarkGoldenRod;
-}
-
-.container {
-  max-width: 1140px;
-  margin: 2em 0;
-  padding: 2em 8em;
-  background-color: #000000c0;
-  border-radius: 20px;
-}
-
-#navbar {
+#bio-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  list-style: none;
-  padding: 2em;
-  background-color: #000000D4;
-  max-width: 100%;
-  z-index: 20;
-}
-#navbar li {
-  color: grey !important;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: large;
-  padding: 1em 1em;
-  border-right: 1px solid DarkGoldenRod;
-  cursor: pointer;
-  position: relative;
-}
-#navbar .contact {
-  border-left: 1px solid DarkGoldenRod;
-  border-right: none !important;
-}
-#navbar .behind {
-  border: none !important;
-}
-
-#small_nav {
-  display: none;
   position: relative;
   justify-content: center;
-  align-items: center;
-  list-style: none;
-  background-color: black;
-  max-width: 100%;
-  z-index: 10;
-}
-#small_nav li {
-  color: grey !important;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: large;
-  padding: 1.5em 1em;
-  border-right: 1px solid DarkGoldenRod;
-}
-
-.p-text {
-  font-weight: bold;
-  font-family: Gill Sans, sans-serif !important;
-}
-
-@media screen and (max-width: 720px) {
-  #navbar {
-    flex-direction: column;
-    padding: 0;
-    font-size: medium;
-  }
-  #navbar .contact {
-    border-left: none !important;
-    border-top: 1px solid DarkGoldenRod !important;
-    border-right: none !important;
-    border-bottom: none !important;
-  }
-  #navbar .show {
-    display: flex;
-  }
-  #navbar li {
-    border-bottom: 1px solid DarkGoldenRod;
-    border-right: none !important;
-  }
-
-  #small_nav {
-    display: flex;
-  }
-  #small_nav li {
-    border-right: none !important;
-  }
-
-  .contact-container {
-    padding: 0 0.5em;
-  }
-
-  .boxes {
-    flex-direction: column;
-  }
-}
-.logo-container {
-  flex-direction: column;
-  align-items: center;
-  color: gray;
-}
-.logo-container img {
-  padding-bottom: 1rem;
 }
 
 .person {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 1em 4em;
-  margin: 2em 0em;
-  border-top: 1px solid DarkGoldenRod;
+  margin: 0em 4em;
+  opacity: 0;
 }
 .person img {
   width: 30em;
-  height: auto;
+  max-height: 100%;
+}
+
+.p-text {
+  width: 29em;
+}
+
+#home {
+  flex-direction: column;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
   align-items: center;
-}
-.person p {
-  max-width: 30em;
-  font-size: 16px;
+  flex-direction: column-reverse;
 }
 
-.slogan-container {
-  margin-bottom: 2.3em;
-  border-bottom: 1px solid DarkGoldenRod;
-  border-top: 1px solid DarkGoldenRod;
-}
-.slogan-container h1 {
-  font-size: larger;
-  max-width: 20em;
-  text-align: center;
-}
-
-#sequence {
-  background-image: url("./img/Ostnyland2.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#seq_glob {
-  background-image: url("./img/mist-river.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#equipment {
-  background-image: url("./img/joceks-båt.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#archive {
-  background-image: url("./img/epic-sunrise-in-suitsu.jpg");
-  background-size: cover;
-  background-position: center;
+#service-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
 }
 
 #box-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2em;
-}
-
-.boxes {
-  display: flex;
-}
-
-.box-text {
-  margin: 6em 6em;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-size: larger;
-  display: none;
-  opacity: 0;
-  flex-direction: column;
-  background-color: #00000080;
-  padding: 3em;
-  border-radius: 20px;
-}
-.box-text p {
-  padding: 2em;
-}
-
-.serv-text {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-size: x-large;
-  font-family: Gill Sans, sans-serif;
-}
-
-.head-text {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-size: x-large;
-  font-family: Gill Sans, sans-serif;
 }
 
 .services-box {
-  width: 24em;
-  height: 24em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  margin: 0;
   opacity: 0.7;
-  margin: 0.5em;
 }
 .services-box:hover {
   opacity: 1;
 }
 
-.service-container .serv {
-  margin: 2rem 0em;
+.box-text {
+  display: none;
 }
-.service-container .serv h3 {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid wheat;
-}
-.service-container .services-header {
-  border-bottom: 1px solid DarkGoldenRod;
-}
-.service-container .services-text {
-  border-bottom: 1px solid DarkGoldenRod;
-  border-top: 1px solid DarkGoldenRod;
-}
-.service-container .services-text h3 {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid wheat;
-}
-.service-container .services-text p {
-  font-size: 16px;
+.box-text h3 {
+  margin: 0;
 }
 
-.contact-container {
-  width: 38em;
-  padding-top: 2em;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-}
-.contact .contact-form {
-  display: flex;
-  flex-direction: column;
-}
-
-#page-container {
-  position: relative;
-  left: 50%;
-}
-#page-container section {
+.serv-text {
   position: absolute;
-  max-width: 100%;
 }
-#page-container section .container {
-  left: -50%;
-  position: relative;
-  max-width: 100%;
+
+#sequence {
+  background-image: url("./img/mist-river.jpg");
+  background-size: cover;
+}
+
+#equipment {
+  background-image: url("./img/misty-pond.jpg");
+  background-size: cover;
+}
+
+#archive {
+  background-image: url("./img/norrasando.jpg");
+  background-size: cover;
+}
+
+#seq_glob {
+  background-image: url("./img/kiltraske-3.jpg");
+  background-size: cover;
+}
+
+footer {
+  bottom: 0;
+  display: none;
 }
 
 /*# sourceMappingURL=fullstyle.css.map */

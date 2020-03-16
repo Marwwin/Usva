@@ -1,0 +1,169 @@
+body
+    font-family: "Market Fresh Bold", Arial, sans-serif
+    margin: 0
+    scroll-behavior: smooth
+    background-color: black
+    color: white
+    overflow-x: hidden
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+
+#header
+    position: fixed
+    z-index: 100
+    opacity: 0
+    li
+        display: block
+        //opacity: 0
+        font-weight: bold
+        padding: 0.3em 0em
+        .letter
+            opacity: 0
+            font-weight: bold
+            padding-left: 0.1em
+    .nav-button
+        display: flex
+        align-items: center
+        justify-content: end
+
+    img
+        width: 0.8em
+        padding: 0.5em
+        opacity: 0.7
+        &:hover
+            opacity: 1
+
+// STYLING FOR ALL SECTIONS
+.section
+    background-size: cover
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    scroll-behavior: smooth
+
+///////////////
+// SECTION 1 //
+///////////////
+
+#background
+    position: absolute
+    z-index: -1
+    background-size: cover
+    background-image: url("./img/Mist-june-4.jpg")
+
+#slogan-container
+    position: relative
+
+///////////////
+// SECTION 2 //
+///////////////
+
+#s2
+    justify-content: start
+    border-bottom: 1px solid black
+    border-top: 1px solid black
+    background-attachment: fixed
+
+    #parallax-background
+        z-index: -1
+        background-image: url("./img/kiltraske-3.jpg")
+        background-size: cover
+        width: 100%
+        height: 100%
+        position: absolute
+
+    h2
+        font-size: xx-large
+        padding-top: 1em
+        color: #f4f4f4
+    p
+        font-size: x-large
+        padding: 1em 8em
+
+#about-container
+    background-color: sienna
+    color: white
+    text-shadow: 0px 0px 1px 1px black
+
+///////////////
+// SECTION 3 //
+///////////////  
+
+#service-container
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    h1
+        z-index: 2
+        position: relative
+
+.services
+    width: 100%
+    height: 100%
+    position: absolute
+    background-size: contain
+    background-repeat: no-repeat
+    display: flex
+
+.service-overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 1
+    background-color: black
+
+#sequence
+    background-color: #000
+
+#global
+    background-color: #000
+    img
+        max-width: 100%
+        height: 100%
+#equipment
+    background-color: #000
+    .equipment-text
+        display: flex
+        flex-direction: column
+#archive
+    background-color: #000
+    img
+        max-width: 100%
+        height: 100%
+
+    .text-container
+        display: flex
+        flex-direction: column
+
+#service-slide
+    position: absolute
+    display: flex
+    flex-direction: column
+    z-index: 10
+
+#slide-container
+    display: flex
+    background-color: #00000080
+    padding: 0.7em
+    border-radius: 43px
+    li
+        opacity: 0
+
+.slide-button
+    margin: 0em 1em
+    li
+        display: block
+    img
+        width: 0.8em
+        //padding: 0.5em
+        opacity: 0.7
+        box-shadow: 0px 0px 2px 2px black
+        border-radius: 10px
+        &:hover
+            opacity: 1

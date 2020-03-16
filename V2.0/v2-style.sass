@@ -1,0 +1,125 @@
+
+// Main Body    
+body
+    font-family: "Market Fresh Bold", Arial, sans-serif
+    background-color: black
+    color: whitesmoke
+    text-align: center
+    height: 3000px
+    background-attachment: fixed
+    margin: 0px
+    overflow-x: hidden
+    //overflow-y: scroll
+
+// Splash Page / Logo
+
+#loading-screen
+    height: 100%
+    width: 100%
+    background-color: #000000
+    position: absolute
+    z-index: 100
+    opacity: 1
+
+#overlay
+    height: 100%
+    width: 100%
+    background-color: #000000
+    position: absolute
+    background-image: url("./img/Mist-june-4.jpg")
+    background-size: cover
+    //opacity: 0
+
+#logo-container
+    //opacity: 0
+
+#logo
+    position: relative
+
+#slogan-container
+    position: relative
+    opacity: 0
+    .letter
+        font-size: 1em
+        opacity: 0
+        letter-spacing: 0.2em
+
+// The Main Sections Of The Page        
+
+section
+    display: flex
+    justify-content: center
+    position: relative
+
+#bio-container
+    display: flex
+    position: relative
+    justify-content: center
+    //top: 466px
+
+.person
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0em 4em
+    opacity: 0
+    img
+        width: 30em
+        max-height: 100%
+
+.p-text
+    width: 29em
+
+#home
+    flex-direction: column
+
+.info-container
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column-reverse
+
+#service-container
+    display: flex
+    flex-direction: column
+    position: relative
+    align-items: center
+
+#box-container
+    display: flex
+
+.services-box
+    margin:0
+    opacity: 0.7
+    &:hover
+        opacity: 1
+
+
+.box-text
+    display: none
+    h3
+        margin:0
+
+.serv-text
+    position: absolute
+
+#sequence
+    background-image: url("./img/mist-river.jpg")
+    background-size: cover
+#equipment
+    background-image: url("./img/misty-pond.jpg")
+    background-size: cover
+    
+#archive
+    background-image: url("./img/norrasando.jpg")
+    background-size: cover
+    
+#seq_glob
+    background-image: url("./img/kiltraske-3.jpg")
+    background-size: cover
+    
+  
+
+footer
+    bottom: 0
+    display: none
