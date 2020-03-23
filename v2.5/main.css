@@ -72,6 +72,10 @@ html {
   scroll-behavior: smooth;
 }
 
+#s1 {
+  height: 100vh;
+}
+
 #background {
   position: absolute;
   z-index: -1;
@@ -84,12 +88,13 @@ html {
 }
 
 #s2 {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   background-attachment: fixed;
+  height: 75vh;
 }
 
 #s2 #parallax-background {
@@ -154,6 +159,96 @@ html {
   height: 100%;
   z-index: 1;
   background-color: black;
+}
+
+.service-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 9em 0em;
+}
+
+#card1 {
+  margin-left: 8em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8em;
+}
+
+#card2 {
+  margin-left: 8em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8em;
+}
+
+#card3 {
+  margin-left: 8em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8em;
+}
+
+#card4 {
+  margin-left: 8em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8em;
+}
+
+.card-img-container img {
+  width: 100%;
+  max-height: 55em;
+}
+
+.card-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.card-text-container p {
+  text-align: right;
+}
+
+#card1-text {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#card1-text p {
+  text-align: left;
+}
+
+#card3-text {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#card3-text p {
+  text-align: left;
+}
+
+.card-rect {
+  position: absolute;
+  border: 1px solid sienna;
+  border-radius: 6px;
+  z-index: -1;
 }
 
 #sequence {

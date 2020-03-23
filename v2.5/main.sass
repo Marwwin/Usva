@@ -49,6 +49,9 @@ html
 // SECTION 1 //
 ///////////////
 
+#s1
+    height: 100vh
+
 #background
     position: absolute
     z-index: -1
@@ -63,10 +66,11 @@ html
 ///////////////
 
 #s2
-    justify-content: start
+    justify-content: center
     border-bottom: 1px solid black
     border-top: 1px solid black
     background-attachment: fixed
+    height: 75vh
 
     #parallax-background
         z-index: -1
@@ -117,6 +121,64 @@ html
     height: 100%
     z-index: 1
     background-color: black
+
+.service-card
+    display: flex
+    margin: 9em 0em
+
+#card1
+    margin-left: 8em
+    align-items: center
+    margin-right: 8em
+
+#card2
+    margin-left: 8em
+    align-items: center
+    margin-right: 8em
+
+
+#card3
+    margin-left: 8em
+    align-items: center
+    margin-right: 8em
+
+#card4
+    margin-left: 8em
+    align-items: center
+    margin-right: 8em
+
+.card-img-container
+
+    img
+        width: 100%
+        max-height: 55em
+.card-text-container
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    padding-left: 2em
+    padding-right: 2em
+    p
+        text-align: right
+
+#card1-text
+    align-items: flex-end
+    p
+        text-align: left
+
+#card3-text
+    align-items: flex-end
+    p
+        text-align: left
+
+
+
+
+.card-rect
+    position: absolute
+    border: 1px solid sienna
+    border-radius: 6px
+    z-index: -1
 
 #sequence
     background-color: #000

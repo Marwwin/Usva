@@ -1,5 +1,5 @@
 
-var rellax = new Rellax('.rellax');
+//var rellax = new Rellax('.rellax');
 
 // GLOBAL VARIABLES
 var pageWidth = window.innerWidth;
@@ -7,32 +7,43 @@ var pageHeight = window.innerHeight;
 var s3 = document.getElementById("s3");
 
 
-
 // Set dimensions and position of elements
 function reSize() {
     console.log("whoop");
     pageWidth = window.innerWidth;
     pageHeight = window.innerHeight;
-    let sections = document.getElementsByClassName("section");
-    for (let i = 0; i < sections.length; i++) {
-        sections[i].style.height = pageHeight + "px";
-    }
     document.getElementById("background").style.height = pageHeight + "px";
     document.getElementById("background").style.width = pageWidth + "px";
 
+
+    makeRect();
+   
     let header = document.getElementById("header");
     header.style.left = pageWidth - (header.offsetWidth * 1.5) + "px";
     header.style.top = (pageHeight / 2) - header.offsetHeight + "px";
 
-    let slide = document.getElementById("service-slide");
+  /*  let slide = document.getElementById("service-slide");
     console.log("slide" + slide);
     slide.style.top = (s3.offsetTop + s3.offsetHeight - slide.offsetHeight) + "px";
-}
+}*/}
 
 window.addEventListener('resize', reSize);
 window.addEventListener('beforeunload', function () {
     window.scrollTo(0, 0);
 });
+
+function makeRect(){
+    let rect = document.getElementsByClassName("card-rect");
+    let images = document.getElementsByClassName("card-image");
+    for(let  i=0;i<rect.length;i++){
+        let tempcard = rect[i].parentElement;
+        rect[i].style.height = images[i].offsetHeight * 1.3 + "px";
+        rect[i].style.width = (tempcard.offsetWidth - (images[i].offsetWidth /2)) + "px";
+        if(i == 1 || i == 3) {
+        rect[i].style.right = (pageWidth- (tempcard.offsetLeft + tempcard.offsetWidth)) + "px";
+    }
+    }
+}
 
 
 function navEventListener() {
@@ -168,7 +179,7 @@ var scrollAnimation = anime({
     easing: 'linear',
     autoplay: false
 });
-
+/*
 var showPerson = anime({
 
     targets: '.person',
@@ -185,7 +196,7 @@ var hidePerson = anime({
     opacity: [1, 0],
     autoplay: false,
 });
-
+*/
 
 var moveServiceText = anime({
     targets: '#service-text',
@@ -229,7 +240,7 @@ window.addEventListener('scroll', () => {
 
 
     }
-
+})
 
 
     /*if (window.scrollY < pageHeight * 0.8) {
@@ -238,7 +249,7 @@ window.addEventListener('scroll', () => {
       // When bios start fading out adjust the last value 
       else if ((window.scrollY / (pageHeight * 0.8)) > 1) {
           hidePerson.seek((hidePerson.duration * ((window.scrollY - pageHeight / 2) / (pageHeight / 2))) - 600);
-      }*/
+      }
 
 
 });
@@ -251,7 +262,7 @@ function fadeOut(array) {
         easing: 'linear'
     })
 }
-
+/*
 let slideButtons = document.getElementsByClassName("slide-button");
 console.log(slideButtons);
 for (let i = 0; i < 4; i++) {
@@ -314,5 +325,4 @@ for (let i = 0; i < 4; i++) {
             
     }});
 
-
-}
+*/
