@@ -13,6 +13,23 @@ html {
   scroll-behavior: smooth;
 }
 
+#loading-page {
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #header {
   position: fixed;
   z-index: 100;
@@ -83,7 +100,12 @@ html {
   background-image: url("./img/Mist-june-4.jpg");
 }
 
+#logo {
+  opacity: 0;
+}
+
 #slogan-container {
+  opacity: 0;
   position: relative;
 }
 
@@ -107,14 +129,14 @@ html {
 }
 
 #s2 h2 {
-  font-size: xx-large;
+  font-size: xxx-large;
   padding-top: 1em;
   color: #f4f4f4;
 }
 
 #s2 p {
   font-size: x-large;
-  padding: 1em 8em;
+  padding: 3em 7em;
 }
 
 #about-container {
@@ -166,43 +188,39 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin: 9em 0em;
-}
-
-#card1 {
-  margin-left: 8em;
+  margin-left: 6.5em;
+  margin-right: 6.5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 8em;
 }
 
-#card2 {
-  margin-left: 8em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 8em;
+.seq_h {
+  font-size: xxx-large;
+  margin: 0.4em 0em;
 }
 
-#card3 {
-  margin-left: 8em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 8em;
+.seq_u {
+  color: #a44a1f;
+  font-size: xx-large;
+  margin: 0.6em 0em;
 }
 
-#card4 {
-  margin-left: 8em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 8em;
+.card-img-container {
+  background-color: #000000;
 }
 
 .card-img-container img {
   width: 100%;
   max-height: 55em;
+}
+
+.card-img-container .card-image {
+  opacity: 0;
+}
+
+#card1-img {
+  opacity: 0;
 }
 
 .card-text-container {
@@ -213,42 +231,40 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
   padding-left: 2em;
   padding-right: 2em;
 }
 
-.card-text-container p {
-  text-align: right;
-}
-
-#card1-text {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#card1-text p {
-  text-align: left;
-}
-
-#card3-text {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#card3-text p {
-  text-align: left;
-}
-
 .card-rect {
   position: absolute;
-  border: 1px solid sienna;
   border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
   z-index: -1;
+}
+
+#rect1 {
+  -o-border-image: linear-gradient(to left, black, sienna) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(black), to(sienna)) 1;
+     border-image: linear-gradient(to left, black, sienna) 1;
+}
+
+#rect2 {
+  -o-border-image: linear-gradient(to right, black, sienna) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(black), to(sienna)) 1;
+     border-image: linear-gradient(to right, black, sienna) 1;
+}
+
+#rect3 {
+  -o-border-image: linear-gradient(to left, black, sienna) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(black), to(sienna)) 1;
+     border-image: linear-gradient(to left, black, sienna) 1;
+}
+
+#rect4 {
+  -o-border-image: linear-gradient(to right, black, sienna) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(black), to(sienna)) 1;
+     border-image: linear-gradient(to right, black, sienna) 1;
 }
 
 #sequence {
@@ -340,5 +356,143 @@ html {
 
 .slide-button img:hover {
   opacity: 1;
+}
+
+#s4 {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#s4 a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-size: x-large;
+}
+
+#s4 a:link {
+  color: white;
+}
+
+#s4 a:hover {
+  color: #8B4513;
+}
+
+#s4 a:visited {
+  color: white;
+}
+
+#s4 a:active {
+  color: black;
+}
+
+#contact {
+  font-size: xxx-large;
+}
+
+#inquiries {
+  color: saddlebrown;
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+#mail {
+  font-style: x-large;
+  font-style: italic;
+  margin: 4em;
+}
+
+#instagram-btn {
+  margin: 2em;
+}
+
+#instagram-btn img {
+  max-width: 1em;
+}
+
+footer {
+  font-size: xx-small;
+  color: saddlebrown;
+}
+
+@media (max-width: 768px) {
+  #about-container p {
+    padding: 0em;
+    font-size: initial;
+    padding: 2em 1em;
+  }
+  .service-card {
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-top: 3em;
+    margin-bottom: 0em;
+    padding-bottom: 3em;
+  }
+  #card1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 1px solid sienna;
+  }
+  #card2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    border-bottom: 1px solid sienna;
+  }
+  #card3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 1px solid sienna;
+  }
+  #card4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .card-rect {
+    display: none;
+  }
+  .card-img-container {
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .service-card p {
+    font-size: smaller;
+  }
+  #about-container p {
+    padding: 1em 2em;
+  }
+  .service-card {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .seq_h {
+    font-size: x-large;
+    margin: 0.2em 0em;
+  }
+  .seq_u {
+    color: #a44a1f;
+    font-size: larger;
+    margin: 0.3em 0em;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1260px) {
+  .seq_h {
+    font-size: xx-large;
+    margin: 0.2em 0em;
+  }
+  .seq_u {
+    color: #a44a1f;
+    font-size: x-large;
+    margin: 0.3em 0em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,6 +10,16 @@ body
 html
     scroll-behavior: smooth
 
+#loading-page
+    position: absolute
+    z-index: 100
+    width: 100vw
+    height: 100vh
+    background-color: #000
+    display: flex
+    justify-content: center
+    align-items: center
+
 #header
     position: fixed
     z-index: 100
@@ -58,7 +68,11 @@ html
     background-size: cover
     background-image: url("./img/Mist-june-4.jpg")
 
+#logo
+    opacity: 0
+
 #slogan-container
+    opacity: 0
     position: relative
 
 ///////////////
@@ -81,12 +95,12 @@ html
         position: absolute
 
     h2
-        font-size: xx-large
+        font-size: xxx-large
         padding-top: 1em
         color: #f4f4f4
     p
         font-size: x-large
-        padding: 1em 8em
+        padding: 3em 7em
 
 #about-container
     background-color: sienna
@@ -125,60 +139,66 @@ html
 .service-card
     display: flex
     margin: 9em 0em
-
-#card1
-    margin-left: 8em
+    margin-left: 6.5em
+    margin-right: 6.5em
     align-items: center
-    margin-right: 8em
 
-#card2
-    margin-left: 8em
-    align-items: center
-    margin-right: 8em
+.seq_h
+    font-size: xxx-large
+    margin: 0.4em 0em
 
-
-#card3
-    margin-left: 8em
-    align-items: center
-    margin-right: 8em
-
-#card4
-    margin-left: 8em
-    align-items: center
-    margin-right: 8em
+.seq_u
+    color: #a44a1f
+    font-size: xx-large
+    margin: 0.6em 0em
 
 .card-img-container
-
+    background-color: #000000
     img
         width: 100%
         max-height: 55em
+
+    .card-image
+        opacity: 0
+
+#card1-img
+    opacity: 0
+
 .card-text-container
     display: flex
     flex-direction: column
-    align-items: baseline
+    //align-items: baseline
     padding-left: 2em
     padding-right: 2em
     p
-        text-align: right
+        //text-align: right
 
 #card1-text
-    align-items: flex-end
+    //align-items: flex-end
     p
-        text-align: left
+        //text-align: left
 
 #card3-text
-    align-items: flex-end
+    //align-items: flex-end
     p
-        text-align: left
-
-
-
+        //text-align: left
 
 .card-rect
     position: absolute
-    border: 1px solid sienna
+    //border: 1px solid sienna
     border-radius: 6px
+    border-width: 1px
+    border-style: solid
     z-index: -1
+
+#rect1
+    border-image: linear-gradient(to left, rgb(0, 0, 0),sienna )1
+#rect2
+    border-image: linear-gradient(to right, rgb(0, 0, 0),sienna )1
+#rect3
+    border-image: linear-gradient(to left, rgb(0, 0, 0),sienna )1
+#rect4
+    border-image: linear-gradient(to right, rgb(0, 0, 0),sienna )1
 
 #sequence
     background-color: #000
@@ -229,3 +249,102 @@ html
         border-radius: 10px
         &:hover
             opacity: 1
+
+#s4
+    justify-content: space-around
+    //height: 70vh
+    a
+        text-decoration-line: none
+        font-size: x-large
+        &:link
+            color: white
+        &:hover
+            color: #8B4513
+        &:visited
+            color: white
+        &:active
+            color: black
+
+#contact
+    font-size: xxx-large
+
+#inquiries
+    color: saddlebrown
+    font-size: xxx-large
+    font-style: italic
+
+#mail
+    font-style: x-large
+    font-style: italic
+    margin: 4em
+
+#instagram-btn
+    margin: 2em
+
+    img
+        max-width: 1em
+
+footer
+    font-size: xx-small
+    color: saddlebrown
+
+@media (max-width: 768px){
+#about-container
+    p
+        padding: 0em
+        font-size: initial
+        padding: 2em 1em
+
+.service-card
+    margin-left: 0em
+    margin-right: 0em 
+    margin-top: 3em
+    margin-bottom: 0em 
+    padding-bottom: 3em 
+#card1
+    flex-direction: column
+    border-bottom: 1px solid sienna
+#card2
+    flex-direction: column-reverse
+    border-bottom: 1px solid sienna
+#card3
+    flex-direction: column
+    border-bottom: 1px solid sienna
+#card4  
+    flex-direction: column-reverse
+.card-rect
+    display: none    
+.card-img-container
+    margin-top: 1em}
+
+@media (min-width: 768px) and (max-width: 992px){
+.service-card
+    p
+        font-size: smaller
+
+#about-container
+    p
+        padding: 1em 2em
+
+.service-card
+    margin-left: 2em
+    margin-right: 2em
+
+.seq_h
+    font-size: x-large
+    margin: 0.2em 0em
+
+.seq_u
+    color: #a44a1f
+    font-size: larger
+    margin: 0.3em 0em}
+@media (min-width: 992px) and (max-width: 1260px){
+
+.seq_h
+    font-size: xx-large
+    margin: 0.2em 0em
+
+.seq_u
+    color: #a44a1f
+    font-size: x-large
+    margin: 0.3em 0em}
